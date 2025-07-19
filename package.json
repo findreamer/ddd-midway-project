@@ -12,6 +12,7 @@
     "@midwayjs/swagger": "3",
     "@midwayjs/typeorm": "3",
     "@midwayjs/validate": "^3.12.0",
+    "mysql2": "^3.14.2",
     "typeorm": "^0.3.25"
   },
   "devDependencies": {

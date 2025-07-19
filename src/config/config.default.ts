@@ -6,4 +6,26 @@ export default {
   koa: {
     port: 7001,
   },
+  typeorm: {
+    dataSource: {
+      default: {
+        type: 'mysql',
+        host: 'localhost',
+        port: 3306,
+        username: 'root',
+        password: 'your_password',
+        database: 'enterprise_management',
+        entities: ['**/*.entity{.ts,.js}'],
+        synchronize: true,
+        logging: true,
+        poolSize: 10,
+        connectorPackage: 'mysql2',
+      },
+    },
+  },
+  swagger: {
+    title: '企业管理系统',
+    version: '1.0',
+    description: '企业管理系统',
+  },
 } as MidwayConfig;
