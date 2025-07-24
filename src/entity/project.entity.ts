@@ -1,4 +1,12 @@
-import { Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 import { Tenant } from './tenant.entity';
 import { Contract } from './contract.entity';
 import { Emp } from './emp.entity';
@@ -27,4 +35,18 @@ export class Project {
     name: 'emp_id',
   })
   emp: Emp;
+
+  @Column({
+    default: true,
+  })
+  status: boolean;
+
+  @CreateDateColumn()
+  createAt: Date;
+
+  @UpdateDateColumn()
+  updateAt: Date;
+
+  @Column()
+  createBy: number;
 }

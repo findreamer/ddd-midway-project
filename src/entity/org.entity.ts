@@ -58,6 +58,11 @@ export class Org {
   })
   leader: Emp;
 
+  @Column({
+    default: true,
+  })
+  status: boolean;
+
   @CreateDateColumn()
   @ApiProperty({
     description: '创建时间',

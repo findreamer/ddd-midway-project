@@ -22,6 +22,11 @@ export class Tenant {
   })
   name: string;
 
+  @Column({
+    default: true,
+  })
+  status: boolean;
+
   @CreateDateColumn()
   createdAt: Date;
 

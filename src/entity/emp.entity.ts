@@ -62,6 +62,11 @@ export class Emp {
   dob: Date;
 
   @Column({
+    default: true,
+  })
+  status: boolean;
+
+  @Column({
     comment: '创建时间',
   })
   createAt: Date;

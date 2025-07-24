@@ -37,6 +37,11 @@ export class OrgType {
   })
   name: string;
 
+  @Column({
+    default: true,
+  })
+  status: boolean;
+
   @CreateDateColumn()
   @ApiProperty({
     description: '创建时间',

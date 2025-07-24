@@ -37,6 +37,11 @@ export class Client {
   })
   name: string;
 
+  @Column({
+    default: true,
+  })
+  status: boolean;
+
   @CreateDateColumn({
     comment: '创建时间',
   })
