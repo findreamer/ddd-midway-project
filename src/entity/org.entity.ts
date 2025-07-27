@@ -34,6 +34,8 @@ export class Org {
   @OneToOne(() => OrgType)
   @JoinColumn({
     name: 'org_type_code',
+    referencedColumnName: 'code',
+    foreignKeyConstraintName: 'fk',
   })
   orgTypeCode: OrgType;
 
