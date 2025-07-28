@@ -28,4 +28,8 @@ export default {
     version: '1.0',
     description: '企业管理系统',
   },
+  jwt: {
+    secret: 'zvcmxjsiwu!23W1208x',
+    expiresIn: '2d',
+  },
 } as MidwayConfig;
